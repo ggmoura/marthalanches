@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 appengine-angular-guestbook-java
 ================================
 
