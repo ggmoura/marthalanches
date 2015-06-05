@@ -1,0 +1,40 @@
+<header ng-switch on="$location.path().indexOf('/Produtos/new') > -1">
+    <h3 ng-switch-when="true">Create a new Produto</h3>
+    <h3 ng-switch-when="false">View or edit Produto</h3>
+</header>
+<form id="ProdutoForm" name="ProdutoForm" class="form-horizontal" role="form">
+    <div ng-show="displayError" class="alert alert-danger">
+        <strong>Error!</strong> Something broke. Retry, or cancel and start afresh.
+    </div>
+    
+    <div class="form-group" ng-class="{'has-error': ProdutoForm.nomeProduto.$invalid}">
+        <label for="nomeProduto" class="col-sm-2 control-label">Nome Produto</label>
+        <div id="precoCustoControls" class="col-sm-10">
+            <input id="nomeProduto" name="nomeProduto" type="text" class="form-control" ng-model="produto.nomeProduto" placeholder="Enter the Produto Name"></input>
+        </div>
+    </div>
+    
+    <div class="form-group" ng-class="{'has-error': ProdutoForm.precoCusto.$invalid}">
+        <label for="precoCusto" class="col-sm-2 control-label">Preco Custo</label>
+        <div id="precoCustoControls" class="col-sm-10">
+            <input id="precoCusto" name="precoCusto" type="number" class="form-control" ng-model="produto.precoCusto" placeholder="Enter the Produto Preco Custo"></input>
+            <span class="help-block error" ng-show="ProdutoForm.precoCusto.$error.number">not a number</span>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': ProdutoForm.precoVenda.$invalid}">
+        <label for="precoVenda" class="col-sm-2 control-label">Preco Venda</label>
+        <div id="precoVendaControls" class="col-sm-10">
+            <input id="precoVenda" name="precoVenda" type="number" class="form-control" ng-model="produto.precoVenda" placeholder="Enter the Produto Preco Venda"></input>
+            <span class="help-block error" ng-show="ProdutoForm.precoVenda.$error.number">not a number</span>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button id="saveProduto" name="saveProduto" class="btn btn-primary" ng-disabled="isClean() || ProdutoForm.$invalid" ng-click="save()"><span class="glyphicon glyphicon-ok-sign"></span> Save</button>
+            <button id="cancel" name="cancel" class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove-sign"></span>Cancel</button>
+            <button id="deleteProduto" name="deleteProduto" class="btn btn-danger" ng-show="produto.id" ng-click="remove()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        </div>
+    </div>
+</form>
