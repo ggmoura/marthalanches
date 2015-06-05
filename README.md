@@ -57,5 +57,3 @@ command:
 [1]: http://maven.apache.org/
 [2]: http://karma-runner.github.io/0.8/index.html
 =======
-# marthalanches
->>>>>>> branch 'master' of https://github.com/ggmoura/marthalanches.git
