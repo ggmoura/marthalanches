@@ -2,7 +2,7 @@ package br.com.alinesolutions.marthalanches.service;
 
 import java.util.List;
 
-public interface BaseService<T, ID> {
+public interface IBaseService<T, ID> {
 
 	void persist(T entity);
 

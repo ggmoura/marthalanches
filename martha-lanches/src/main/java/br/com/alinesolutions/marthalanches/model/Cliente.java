@@ -1,11 +1,6 @@
 package br.com.alinesolutions.marthalanches.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -16,13 +11,9 @@ import br.com.alinesolutions.marthalanches.util.Constante;
 
 @Entity
 @XmlRootElement
-public class Cliente implements Serializable {
+public class Cliente extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
 
 	@NotNull
 	@Pattern(regexp = "[^0-9]*", message = Constante.App.MENSAGEM_NOME_INVALIDO)
@@ -39,14 +30,6 @@ public class Cliente implements Serializable {
 	@NotNull
 	@Pattern(regexp = Constante.App.PATTERN_EMAIL, message = Constante.App.MENSAGEM_EMAIL_INVALIDO)
 	private String email;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getNome() {
 		return nome;

@@ -21,9 +21,6 @@ import br.com.alinesolutions.marthalanches.model.Cliente;
 import br.com.alinesolutions.marthalanches.service.cliente.ClienteService;
 import br.com.alinesolutions.marthalanches.util.ServiceFactory;
 
-/**
- * 
- */
 @Stateless
 @Path("/clientes")
 public class ClienteEndpoint {

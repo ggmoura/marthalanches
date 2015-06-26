@@ -87,6 +87,7 @@ public class ClienteService implements IClienteService {
 		EntityManager mgr = getEntityManager();
 		try {
 			Query query = mgr.createQuery("select from Cliente as cliente");
+			query.setHint("datanucleus.appengine.datastoreReadConsistency", "EVENTUAL");
 			if (startPosition != null && maxResult != null && maxResult > 0) {
 				query.setFirstResult(0);
 				query.setMaxResults(maxResult);
