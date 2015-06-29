@@ -66,3 +66,13 @@ table {
         width: 100%;
     }
 }
+
+.table-hover tbody tr:hover > td {
+  cursor: pointer;
+}
+
+.icone-produto {
+  cursor: pointer;	
+}
+
+

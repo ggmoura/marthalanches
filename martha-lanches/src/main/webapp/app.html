@@ -3,9 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Martha Lanches</title>
+	<title>Martha-lanches</title>
     <link href="styles/bootstrap.css" rel="stylesheet" media="screen">
     <link href="styles/bootstrap-theme.css" rel="stylesheet" media="screen">
+    <link href="styles/docs.min.css" rel="stylesheet" media="screen">
     <link href="styles/main.css" rel="stylesheet" media="screen">
 </head>
 <body>
@@ -20,7 +21,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-				    <a class="navbar-brand" href="#">Martha Lanches</a>
+				    <a class="navbar-brand" href="#">Martha-lanches</a>
 			    </div>
 			</div>
     	</div>
@@ -35,6 +36,7 @@
                     <nav class="sidebar-nav" ng-controller="NavController" role="navigation">
                         <div id="sidebar-entries" class="list-group">
                         	<a class="list-group-item" ng-class="{active: matchesRoute('Clientes')}" href="#/Clientes" data-toggle="offcanvas">Clientes</a>
+                        	<a class="list-group-item" ng-class="{active: matchesRoute('Produtos')}" href="#/Produtos" data-toggle="offcanvas">Produtos</a>
                         </div>
                     </nav>
                 </div>
@@ -72,5 +74,9 @@
     <script src="scripts/controllers/newClienteController.js"></script>
     <script src="scripts/controllers/searchClienteController.js"></script>
     <script src="scripts/controllers/editClienteController.js"></script>
+    <script src="scripts/services/ProdutoFactory.js"></script>
+    <script src="scripts/controllers/newProdutoController.js"></script>
+    <script src="scripts/controllers/searchProdutoController.js"></script>
+    <script src="scripts/controllers/editProdutoController.js"></script>
 </body>
 </html>

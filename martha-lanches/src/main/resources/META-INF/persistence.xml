@@ -5,6 +5,7 @@
 	<persistence-unit name="martha-lanches-persistence-unit">
         <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
         <class>br.com.alinesolutions.marthalanches.model.Cliente</class>
+        <class>br.com.alinesolutions.marthalanches.model.Produto</class>
         <properties>
             <property name="datanucleus.NontransactionalRead" value="true"/>
             <property name="datanucleus.NontransactionalWrite" value="true"/>
