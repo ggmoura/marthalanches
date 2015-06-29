@@ -32,19 +32,16 @@
     </div>
 
     <div class="form-group">
-        <label for="quantidadeEstoque" class="col-sm-2 control-label">Quantidade Estoque</label>
+        <label for="quantidadeEstoque" class="col-sm-2 control-label">Estoque</label>
         <div class="col-sm-10">
             <input id="quantidadeEstoque" name="quantidadeEstoque" class="form-control" type="text" ng-model="search.quantidadeEstoque" placeholder="Enter the Produto Quantidade Estoque"></input>
         </div>
     </div>
-
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-sm-10">
-                <a id="Search" class="btn btn-primary" ng-click="performSearch()"><span class="glyphicon glyphicon-search"></span> Search</a>
-            </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-sm-10">
+            <a id="Search" class="btn btn-primary" ng-click="performSearch()"><span class="glyphicon glyphicon-search"></span> Search</a>
         </div>
+    </div>
     </form>
 </div>
 <div id="search-results">
@@ -55,7 +52,8 @@
                     <th>Nome</th>
                     <th>Preco Custo</th>
                     <th>Preco Venda</th>
-                    <th>Quantidade Estoque</th>
+					<th>Estoque</th>
+					<th>icone</th>
                 </tr>
             </thead>
             <tbody id="search-results-body">
@@ -64,6 +62,7 @@
                     <td><a href="#/Produtos/edit/{{result.id}}">{{result.precoCusto}}</a></td>
                     <td><a href="#/Produtos/edit/{{result.id}}">{{result.precoVenda}}</a></td>
                     <td><a href="#/Produtos/edit/{{result.id}}">{{result.quantidadeEstoque}}</a></td>
+                    <td><a href="#/Produtos/edit/{{result.id}}" class="glyphicon glyphicon-{{result.icone}}"></a></td>
                 </tr>
             </tbody>
         </table>

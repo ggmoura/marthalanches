@@ -1,5 +1,3 @@
-
-
 angular.module('marthalanches').controller('EditProdutoController', function($scope, $routeParams, $location, ProdutoResource, Utils) {
     var self = this;
     $scope.disabled = false;

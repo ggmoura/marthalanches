@@ -1,4 +1,3 @@
-
 angular.module('marthalanches').controller('NewProdutoController', function ($scope, $location, locationParser, ProdutoResource, Utils) {
     $scope.disabled = false;
     $scope.$location = $location;

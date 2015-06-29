@@ -56,6 +56,7 @@ public class ProdutoService implements IProdutoService {
 		newEntity.setPrecoCusto(entity.getPrecoCusto());
 		newEntity.setPrecoVenda(entity.getPrecoVenda());
 		newEntity.setQuantidadeEstoque(entity.getQuantidadeEstoque());
+		newEntity.setIcone(entity.getIcone());
 	}
 
 	@Override

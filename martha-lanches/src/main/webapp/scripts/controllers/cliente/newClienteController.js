@@ -1,4 +1,3 @@
-
 angular.module('marthalanches').controller('NewClienteController', function ($scope, $location, locationParser, ClienteResource ) {
     $scope.disabled = false;
     $scope.$location = $location;

@@ -1,7 +1,4 @@
-
-
 angular.module('marthalanches').controller('SearchProdutoController', function($scope, $http, ProdutoResource ) {
-
     $scope.search={};
     $scope.currentPage = 0;
     $scope.pageSize= 10;

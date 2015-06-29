@@ -1,5 +1,3 @@
-
-
 angular.module('marthalanches').controller('EditClienteController', function($scope, $routeParams, $location, ClienteResource ) {
     var self = this;
     $scope.disabled = false;
