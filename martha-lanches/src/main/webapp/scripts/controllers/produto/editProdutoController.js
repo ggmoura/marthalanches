@@ -1,4 +1,4 @@
-angular.module('marthalanches').controller('EditProdutoController', function($scope, $routeParams, $location, ProdutoResource, Utils) {
+	angular.module('marthalanches').controller('EditProdutoController', function($scope, $routeParams, $location, ProdutoResource, Utils) {
     var self = this;
     $scope.disabled = false;
     $scope.$location = $location;

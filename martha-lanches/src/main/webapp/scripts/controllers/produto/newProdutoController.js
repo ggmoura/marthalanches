@@ -1,8 +1,9 @@
+
 angular.module('marthalanches').controller('NewProdutoController', function ($scope, $location, locationParser, ProdutoResource, Utils) {
     $scope.disabled = false;
     $scope.$location = $location;
     $scope.produto = $scope.produto || {};
-    
+    $scope.icones = Utils.getListaIcones();
 
     $scope.save = function() {
         var successCallback = function(data,responseHeaders){
@@ -19,9 +20,9 @@ angular.module('marthalanches').controller('NewProdutoController', function ($sc
     $scope.cancel = function() {
         $location.path("/Produtos");
     };
-    
-    $scope.selecionarIcone = function($event) {
-    	Utils.selecionarIcone($event.currentTarget, $scope);
+
+    $scope.selecionarIcone = function(modalIcones, iconeSelecionado) {
+    	Utils.selecionarIcone(angular.element(modalIcones), iconeSelecionado, $scope);
 	};
     
 });

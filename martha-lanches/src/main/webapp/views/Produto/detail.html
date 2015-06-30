@@ -30,7 +30,7 @@
     </div>
 
     <div class="form-group" ng-class="{'has-error': ProdutoForm.quantidadeEstoque.$invalid}">
-        <label for="quantidadeEstoque" class="col-sm-2 control-label">Quantidade Estoque</label>
+        <label for="quantidadeEstoque" class="col-sm-2 control-label">Estoque</label>
         <div id="quantidadeEstoqueControls" class="col-sm-10">
             <input id="quantidadeEstoque" name="quantidadeEstoque" type="number" class="form-control" ng-model="produto.quantidadeEstoque" placeholder="Enter the Produto Quantidade Estoque"></input>
             <span class="help-block error" ng-show="ProdutoForm.quantidadeEstoque.$error.number">not a number</span>
@@ -53,173 +53,33 @@
             <span class="glyphicon glyphicon-trash"></span>Delete</button>
         </div>
     </div>
-    <div class="form-group">
-    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" ng-init="init()"
-    	 aria-labelledby="gridSystemModalLabel" id="modalIconesProduto">
-	<div class="modal-dialog modal-sm">
-	    <div class="modal-content">
-	    <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          	<span aria-hidden="true">×</span>
-          </button>
-          <h4 class="modal-title" id="myLargeModalLabel">Icone do Produto</h4>
-        </div>
-	     <div class="bs-glyphicons" id="div-icones">
-		    <ul class="bs-glyphicons-list">
-		      
-		        <li class="icone-produto" ng-click="selecionarIcone($event);">
-		          <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-		          <span class="glyphicon-class icone-food">asterisk</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-plus icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-plus</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-euro icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-euro</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-eur icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-eur</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-minus icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-minus</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-cloud icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-cloud</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-envelope icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-envelope</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-pencil icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-pencil</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-glass icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-glass</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-music icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-music</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-search icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-search</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-heart icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-heart</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-star icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-star</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-star-empty icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-star-empty</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-user icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-user</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-film icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-film</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-th-large icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-th-large</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-th icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-th</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-th-list icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-th-list</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-ok icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-ok</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-remove icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-remove</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-zoom-in icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-zoom-in</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-zoom-out icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-zoom-out</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-off icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-off</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-signal icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-signal</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-cog icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-cog</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-trash icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-trash</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-home icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-home</span>
-		        </li>
-		      
-		        <li class="icone-produto">
-		          <span class="glyphicon glyphicon-file icone-food" aria-hidden="true"></span>
-		          <span class="glyphicon-class">glyphicon glyphicon-file</span>
-		        </li>
-		    </ul>
-		  </div>
-		  <div class="modal-footer">
-	        <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div>
-	  </div>
+	<div class="form-group">
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" 
+			 aria-labelledby="gridSystemModalLabel" id="modalIconesProduto">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title">Icone do Produto</h4>
+					</div>
+					<div class="bs-glyphicons">
+						<ul class="bs-glyphicons-list">
+
+							<li ng-repeat="icone in icones" ng-click="selecionarIcone('#modalIconesProduto', icone);">
+								<span class="{{ icone.calsse }}" aria-hidden="true"></span>
+								<span class="glyphicon-class">{{ icone.nomeIcone }}</span>
+							</li>
+
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-    
 </form>
